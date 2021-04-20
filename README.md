@@ -47,48 +47,6 @@ print(a / 2)
 
 ```
 
-### A simple Linear layer using geometry product
-
-```python
-from layers import CFLiner
-bs = 2
-shape = 8
-module = CFLiner(shape, out_channels=4, bias=True)
-input = torch.ones((bs, shape))
-print('\n input \n', input, '\n input shape \n', input.shape)
-output = module(input)
-print('\n output \n', output, '\n output.shape \n',  output.shape)
-
-# output
-#  input 
-#  tensor([[1., 1., 1., 1., 1., 1., 1., 1.],
-#         [1., 1., 1., 1., 1., 1., 1., 1.]]) 
-#  input shape 
-#  torch.Size([2, 8])
-
-#  output 
-#  tensor([[[ 0.0007,  0.0007,  0.0165,  0.0165, -0.0502, -0.0502, -0.0285,
-#           -0.0285],
-#          [-0.0107, -0.0107, -0.0236, -0.0236, -0.0301, -0.0301,  0.0165,
-#            0.0165],
-#          [-0.0160, -0.0160,  0.0046,  0.0046, -0.0592, -0.0592,  0.0104,
-#            0.0104],
-#          [ 0.0799,  0.0799, -0.0691, -0.0691,  0.0050,  0.0050,  0.0024,
-#            0.0024]],
-
-#         [[ 0.0007,  0.0007,  0.0165,  0.0165, -0.0502, -0.0502, -0.0285,
-#           -0.0285],
-#          [-0.0107, -0.0107, -0.0236, -0.0236, -0.0301, -0.0301,  0.0165,
-#            0.0165],
-#          [-0.0160, -0.0160,  0.0046,  0.0046, -0.0592, -0.0592,  0.0104,
-#            0.0104],
-#          [ 0.0799,  0.0799, -0.0691, -0.0691,  0.0050,  0.0050,  0.0024,
-#            0.0024]]], grad_fn=<AddBackward0>) 
-#  output.shape 
-#  torch.Size([2, 4, 8])
-
-```
-
 ## Other
 
 
